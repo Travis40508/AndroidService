@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         numberText = findViewById(R.id.text_number);
         incrementButton = findViewById(R.id.button_increment);
 
+        //STEP ONE - setup a shared pref that will listen for any change to its file. You'll have to implement onSharedPreferenceChangeListener in the class.
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     }
 
     @Override
+    //STEP TWO - in the implemented method, tell the shared pref what to do whenever its value changes.
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         updateClickCount();
     }
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         numberText.setText("Times Clicked: " + clickCount);
     }
 
+    //STEP SIX - start our service and pass in our action of choice for the service to pass to our task class to use our shared pref class, all off the main thread.
     public void listenForButtonPress() {
         incrementButton.setOnClickListener(new View.OnClickListener() {
             @Override

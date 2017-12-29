@@ -8,6 +8,8 @@ import android.support.annotation.Nullable;
  */
 
 public class IntentService extends android.app.IntentService {
+
+    //STEP FIVE - create our intent class that will run our task executor class method in the background, which will then use our shared pref util to save.
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
      *

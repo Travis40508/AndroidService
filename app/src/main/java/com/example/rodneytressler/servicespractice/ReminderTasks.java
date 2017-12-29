@@ -7,6 +7,8 @@ import android.content.Context;
  */
 
 public class ReminderTasks {
+    //STEP FOUR - create our reminder tasks class that will set an action listener, and determine which method to run whenever that action is performed.
+
     public static final String ACTION_INCREMENT_CLICK_COUNT = "increment-click-count";
 
     public static void executeTask(Context context, String action) {

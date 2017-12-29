@@ -9,6 +9,8 @@ import android.preference.PreferenceManager;
  */
 
 public class PreferencesUtilities {
+    //STEP THREE - make your preference util class that will set the new count for prefs, get the count, and increment the count
+
     public static final String KEY_CLICK_COUNT = "click-count";
     public static final String KEY_CLICKING_REMINDER_COUNT = "clicking-reminder-count";
 
